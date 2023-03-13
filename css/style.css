@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #2148C0;
+    background-image: url('../css/img/BG.png');
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    background-size: cover;
+    color: #fff;
+}
+
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+#login {
+    max-width: 300px;
+}
+
+.login-icon {
+    font-size: 60px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    margin: 20px 0px;
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.login-form i {
+    margin-right: 15px;
+}
+
+.form-input {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFF;
+}
+
+.form-input::placeholder {
+    color: #FFF;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.form-submit {
+    margin: 20px 0px;
+    width: 100%;
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #2148C0;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.forgot-form {
+    display: flex;
+    justify-content: end;
+}
+
+.forgot-form a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#error {
+    color: red;
+    font-size: 13px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.forgot {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    /* background: rgba(0, 0, 0, 0.4); */
+    background: #048ff3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot-container {
+    background: #048ff3;
+    max-width: 300px;
+    position: relative;
+}
+
+/* .forgot-close {
+    position: absolute;
+} */
+
+.forgot-header {
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 4px;
+    display: flex;
+}
+
+.email-form{
+    margin: 20px 0px;
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.forgot-email {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFF;
+}
+
+.forgot-email::placeholder {
+    color: #FFF;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.send-email, .back-email {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}

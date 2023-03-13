@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body onload="ktraDN()">
+    <div id="wrapper">
+        <div id="login" >
+            <div class="login-icon">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+            </div>           
+            <div class="login-form">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="username" class="form-input" placeholder="Username">
+            </div>
+            <div class="login-form">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" class="form-input" placeholder="Password">
+            </div>
+            <button onclick="btnLogin()" class="form-submit">Login</button>
+            <div class="forgot-form">
+                <a href="">Forgot password?</a> 
+            </div>
+            <h2 id="error"></h2>
+        </div>
+    </div>
+    <div class="forgot">
+        <div class="forgot-container">
+            <!-- <div class="forgot-close"><i class="fa-solid fa-xmark"></i></div> -->
+            <header class="forgot-header">forgot password</header>
+            <div class="email-form">
+                <input type="email" class="forgot-email" placeholder="Email">
+            </div>
+            <button class="send-email">send</button>
+            <button class="back-email">back</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body> 
+</html> 
