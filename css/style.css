@@ -8,13 +8,16 @@
 body {
     background: #2148C0;
     background-image: url('../css/img/BG.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     background-size: cover;
     color: #fff;
 }
 
-#wrapper {
+.wrapper {
+    
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -24,7 +27,7 @@ body {
 }
 
 #login {
-    max-width: 300px;
+    /* width: 100%; */
 }
 
 .login-icon {
@@ -36,14 +39,15 @@ body {
 
 .login-form {
     margin: 20px 0px;
-    padding: 10px 25px;
+    padding: 10px 15px;
     border: 1px solid #fff;
     border-radius: 5px;
     color: #fff;
+    display: flex;
 }
 
-.login-form i {
-    margin-right: 15px;
+.login-form img {
+    margin-right: 20px;
 }
 
 .form-input {
@@ -76,18 +80,31 @@ body {
     border-radius: 5px;
 }
 
+.form-submit:hover,
+.send-btn:hover,
+.back-btn:hover {
+    opacity: 0.7;
+}
+
 .forgot-form {
     display: flex;
     justify-content: end;
+    margin-top: 15px;
 }
 
-.forgot-form a{
-    text-decoration: none;
+.forgot-form button{
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
     color: #FFFFFF;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.forgot-form button:hover {
+    opacity: 0.7;
 }
 
 #error {
@@ -98,40 +115,39 @@ body {
 }
 
 .forgot {
-    position: fixed;
     right: 0;
     left: 0;
     top: 0;
     bottom: 0;
-    /* background: rgba(0, 0, 0, 0.4); */
-    background: #048ff3;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    background: #2148C0;
+    background-image: url('../css/img/BG.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.forgot.open-forgot {
+    display: flex;
 }
 
 .forgot-container {
-    background: #048ff3;
     max-width: 300px;
     position: relative;
 }
 
-/* .forgot-close {
-    position: absolute;
-} */
-
 .forgot-header {
-    height: 70px;
-    align-items: center;
-    justify-content: center;
     color: #fff;
-    font-size: 30px;
+    font-size: 22px;
     letter-spacing: 4px;
-    display: flex;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 .email-form{
-    margin: 20px 0px;
+    margin: 20px 0px 10px 0px;
     padding: 10px 25px;
     border: 1px solid #fff;
     border-radius: 5px;
@@ -154,10 +170,71 @@ body {
     text-transform: uppercase;
 }
 
-.send-email, .back-email {
-    font-weight: 500;
+.email-form-submit {
+    display: flex;
+    gap: 20px;
+}
+
+.send-btn, .back-btn {
+    margin: 20px 0px;
+    width: 50%;
+    padding: 10px 25px;
+    font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
-    color: #FFFFFF;
+    text-transform: uppercase;
+    color: #2148C0;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
 }
+
+
+
+.job {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+    gap: 10px;
+}
+
+.job-form {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+}
+
+.job-btn {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2148C0;
+    background: #fff;
+}
+
+.job-btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.table{
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+}
+
+table, tr, th {
+    border: 2px solid black;
+
+}
+
+tr, th {
+    padding: 10px;
+    font-size: 15px;
+    
+}
+

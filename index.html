@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Công việc cần làm</title>
 </head>
 <body>
-    HELLO WORD
+    <div class="job">
+        <input type="text" id="name" placeholder="Job Name" class="job-form">
+        <button onclick="add()" class="job-btn">submit</button>
+    </div>
+    <table class="table" id="render">
+        <tr>
+            <th>Name Job</th>  
+            <th>Action</th>       
+        </tr>
+    </table>
+
+    <script src="./Js/main.js"></script>
 </body>
 </html>

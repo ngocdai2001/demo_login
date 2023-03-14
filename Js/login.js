@@ -22,5 +22,24 @@ function btnLogin() {
         ktraDN()
     } else {
         document.getElementById("error").innerHTML = "Yêu cầu nhập lại thông tin!";
-    }
+    }   
 }
+
+
+const btnForgot = document.querySelector(".forgot-btn")
+const back = document.querySelector(".back-btn")
+const forgot = document.querySelector(".forgot")
+
+function showForgot() {
+    forgot.classList.add('open-forgot')
+}
+
+function showWrapper() {
+    forgot.classList.remove('open-forgot')
+}
+
+btnForgot.addEventListener("click", showForgot)
+back.addEventListener("click", showWrapper)
+
+
+
