@@ -9,38 +9,40 @@
     <title>Login</title>
 </head>
 <body onload="ktraDN()">
-    <div id="wrapper">
+    <div class="wrapper">
         <div id="login" >
             <div class="login-icon">
-                <i class="fa-solid fa-cart-arrow-down"></i>
+                <img src="./css/img/Group.png" alt="">
             </div>           
             <div class="login-form">
-                <i class="fa-solid fa-user"></i>
+                <img src="./css/img/user.png" alt="">
                 <input type="text" id="username" class="form-input" placeholder="Username">
             </div>
             <div class="login-form">
-                <i class="fa-solid fa-lock"></i>
+                <img src="./css/img/lock.png" alt="">
                 <input type="password" id="password" class="form-input" placeholder="Password">
             </div>
             <button onclick="btnLogin()" class="form-submit">Login</button>
             <div class="forgot-form">
-                <a href="">Forgot password?</a> 
+                <button class="forgot-btn">Forgot password?</button> 
             </div>
             <h2 id="error"></h2>
         </div>
     </div>
+
     <div class="forgot">
         <div class="forgot-container">
-            <!-- <div class="forgot-close"><i class="fa-solid fa-xmark"></i></div> -->
             <header class="forgot-header">forgot password</header>
             <div class="email-form">
                 <input type="email" class="forgot-email" placeholder="Email">
             </div>
-            <button class="send-email">send</button>
-            <button class="back-email">back</button>
+            <div class="email-form-submit">
+                <button class="send-btn">send</button>
+                <button class="back-btn">back</button>
+            </div>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="./Js/login.js"></script>
 </body> 
 </html> 
