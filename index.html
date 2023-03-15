@@ -4,21 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Công việc cần làm</title>
+    <title>Login</title>
 </head>
-<body>
-    <div class="job">
-        <input type="text" id="name" placeholder="Job Name" class="job-form">
-        <button onclick="add()" class="job-btn">submit</button>
+<body onload="ktraDN()">
+    <div class="wrapper">
+        <div id="login">
+            <div class="login-icon">
+                <img src="./css/img/Group.png" alt="">
+            </div>           
+            <div class="login-form">
+                <img src="./css/img/user.png" alt="">
+                <input type="text" id="username" class="form-input" placeholder="Username">
+            </div>
+            <div class="login-form">
+                <img src="./css/img/lock.png" alt="">
+                <input type="password" id="password" class="form-input" placeholder="Password">
+            </div>
+            <button onclick="onFormSubmit()" class="form-submit">Login</button>
+            <div class="forgot-form">
+                <button class="forgot-btn">Forgot password?</button> 
+            </div>
+            <h2 id="error"></h2>
+        </div>
     </div>
-    <table class="table" id="render">
-        <tr>
-            <th>Name Job</th>  
-            <th>Action</th>       
-        </tr>
-    </table>
 
-    <script src="./Js/main.js"></script>
-</body>
-</html>
+    <div class="forgot">
+        <div class="forgot-container">
+            <header class="forgot-header">forgot password</header>
+            <div class="email-form">
+                <input type="email" class="forgot-email" placeholder="Email">
+            </div>
+            <div class="email-form-submit">
+                <button class="send-btn">send</button>
+                <button class="back-btn">back</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Js/login.js"></script>
+</body> 
+</html> 
