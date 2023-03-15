@@ -1,28 +1,35 @@
-const dataLogin = [
-        {
-            username: "internship_vmodev",
-            password: "vmodev@2012"
-        }
-    ]
+var CORRECT_USER = "internship_vmodev"
+var CORRECT_PASS = "vmodev@2012"
+
+var input_user = document.getElementById("username")
+var input_pass = document.getElementById("password")
+var formLogin = document.getElementById("login")
+
 let isLogin = localStorage.getItem("token") ? true : false ;
 
 function ktraDN() {
     if(isLogin) {
-        window.location.href = "index.html";
+        window.location.href = "main.html";
     }
+}   
+
+if(formLogin.attachEvent) {
+    formLogin.attachEvent('submit', onFormSubmit);
+} else {
+    formLogin.addEventListener('submit', onFormSubmit);
 }
 
-function btnLogin() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
-    let checkLogin = dataLogin.some(value => value.username === username && value.password === password);
-    if (checkLogin) {
+function onFormSubmit() {
+    var username = input_user.value;
+    var password = input_pass.value;
+
+    if(username == CORRECT_USER && password == CORRECT_PASS) {
         localStorage.setItem("token", username)
         isLogin = true;
-        ktraDN()
+        ktraDN();
     } else {
-        document.getElementById("error").innerHTML = "Yêu cầu nhập lại thông tin!";
-    }   
+        document.getElementById("error").innerHTML = "Please check your login information again!";
+    }
 }
 
 

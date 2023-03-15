@@ -1,36 +1,40 @@
-var data = []
-
 function add() {
     var item_name = document.getElementById("name").value
+    var listName = localStorage.getItem("list-name") ? JSON.parse(localStorage.getItem("list-name")) : []
 
-    var item = {
-        Name: item_name
-    }
-    data.push(item);
+    listName.push({
+        name : item_name
+    })
+    localStorage.setItem("list-name", JSON.stringify(listName))
     render()
 }
 
+
 function render() {
-    table = `<tr>
-                <th>Name Job</th> 
-                <th>Action</th>                        
-            </tr>`
-    for(let i=0; i< data.length; i++) {
-        table += `<tr>
-                    <th>${data[i].Name}</th> 
-                    <th><button onclick="del(${data[i].Name})" class="job-btn">Delete</button></th>
+    var listName = localStorage.getItem("list-name") ? JSON.parse(localStorage.getItem("list-name")) : []
+
+    let job = `<tr>
+                    <th>Id</th> 
+                    <th>Job Name</th>  
+                    <th></th>       
                 </tr>`
-    }
-    document.getElementById("render").innerHTML = table
+
+    listName.map((value, index)=>{
+        job+=`<tr>
+                <td>${index+1}</td> 
+                <td>${value.name}</td>  
+                <th><button class="del-btn" onclick="del(${index})"><i class="fa-solid fa-trash"></i></button></th>       
+            </tr>`
+    })
+    document.getElementById("table").innerHTML = job
 }
 
-function del() {    
-    for(let i=0; i<data.length; i++) {
-        console.log()
-        // if(data[i].Name===job) {
-        //     data.splice(i,1)
 
-        //     render()
-        // }
+function del(index) {    
+    var listName = localStorage.getItem("list-name") ? JSON.parse(localStorage.getItem("list-name")) : []
+    if(confirm("Confirm deletion of information!")) {
+        listName.splice(index, 1)
     }
+    localStorage.setItem("list-name", JSON.stringify(listName))
+    render();
 }

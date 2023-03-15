@@ -16,6 +16,7 @@ body {
     color: #fff;
 }
 
+/* Login */
 .wrapper {
     
     min-height: 100vh;
@@ -189,13 +190,20 @@ body {
     border-radius: 5px;
 }
 
-
+/* index */
+.header {
+    letter-spacing: 4px;
+    margin-top: 30px;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 .job {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 0px;
+    margin: 30px 0px 50px 0px;
     gap: 10px;
 }
 
@@ -204,6 +212,7 @@ body {
     border-radius: 5px;
     border: 0;
     outline: 0;
+    width: 42%;
 }
 
 .job-btn {
@@ -221,20 +230,39 @@ body {
     opacity: 0.7;
 }
 
-.table{
+.table-form{
     border-collapse: collapse;
     width: 50%;
     margin: 0 auto;
 }
 
-table, tr, th {
-    border: 2px solid black;
-
-}
-
 tr, th {
-    padding: 10px;
-    font-size: 15px;
-    
+    border: 1px solid #fff;
+    padding: 15px;
 }
 
+tr {
+    background: #7d97e2;
+    color: #fff;
+}
+
+td {
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.del-btn {
+    background: transparent;
+    border: 0;
+}
+
+.del-btn i{
+    color: #fff;
+    font-size: 20px;
+}
+
+.del-btn:hover {
+    opacity: 0.6;
+}
