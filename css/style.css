@@ -17,14 +17,15 @@ body {
 }
 
 /* Login */
-.wrapper {
-    
+.wrapper {  
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    position: relative;
+}
+.wrapper.close-wrapper {
+    display: none;
 }
 
 #login {
@@ -116,20 +117,11 @@ body {
 }
 
 .forgot {
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
     display: none;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    background: #2148C0;
-    background-image: url('../css/img/BG.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    min-height: 100vh;
 }
-
 .forgot.open-forgot {
     display: flex;
 }
@@ -200,11 +192,8 @@ body {
 }
 
 .job {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0px 50px 0px;
-    gap: 10px;
+    text-align: center;
+    margin: 30px 0px 30px 0px;
 }
 
 .job-form {
@@ -212,7 +201,13 @@ body {
     border-radius: 5px;
     border: 0;
     outline: 0;
-    width: 42%;
+    width: 50%;
+}
+
+.error-message{
+    margin: 15px 0px;
+    font-size: 14px;
+    color: red;
 }
 
 .job-btn {
@@ -266,3 +261,5 @@ td {
 .del-btn:hover {
     opacity: 0.6;
 }
+
+

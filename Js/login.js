@@ -12,13 +12,6 @@ function ktraDN() {
         window.location.href = "main.html";
     }
 }   
-
-if(formLogin.attachEvent) {
-    formLogin.attachEvent('submit', onFormSubmit);
-} else {
-    formLogin.addEventListener('submit', onFormSubmit);
-}
-
 function onFormSubmit() {
     var username = input_user.value;
     var password = input_pass.value;
@@ -34,19 +27,33 @@ function onFormSubmit() {
 
 
 const btnForgot = document.querySelector(".forgot-btn")
-const back = document.querySelector(".back-btn")
-const forgot = document.querySelector(".forgot")
+const btnBack = document.querySelector(".back-btn")
+const forgotForm = document.querySelector(".forgot")
+const loginForm = document.querySelector(".wrapper");
+
+function hideLogin(){
+    loginForm.classList.add('close-wrapper');
+}
+function showLogin(){
+    loginForm.classList.remove('close-wrapper');
+}
 
 function showForgot() {
-    forgot.classList.add('open-forgot')
+    forgotForm.classList.add('open-forgot')
 }
 
-function showWrapper() {
-    forgot.classList.remove('open-forgot')
+function hideForgot() {
+    forgotForm.classList.remove('open-forgot')
 }
 
-btnForgot.addEventListener("click", showForgot)
-back.addEventListener("click", showWrapper)
+btnForgot.addEventListener("click", function(){
+    showForgot();
+    hideLogin();
+})
+btnBack.addEventListener("click", function(){
+    hideForgot();
+    showLogin();
+})
 
 
 
